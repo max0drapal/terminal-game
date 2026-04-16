@@ -1,0 +1,48 @@
+body {
+    background-color: #0a0a0a;
+    color: #00ff41; /* Klasická matrix zelená */
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+#terminal {
+    width: 90%;
+    max-width: 800px;
+    height: 80vh;
+    background: rgba(0, 20, 0, 0.9);
+    border: 1px solid #00ff41;
+    padding: 20px;
+    box-shadow: 0 0 15px rgba(0, 255, 65, 0.2);
+    display: flex;
+    flex-direction: column;
+}
+
+#output {
+    flex-grow: 1;
+    overflow-y: auto;
+    margin-bottom: 10px;
+}
+
+.input-line {
+    display: flex;
+}
+
+.prompt {
+    margin-right: 10px;
+    white-space: nowrap;
+}
+
+#commandInput {
+    background: transparent;
+    border: none;
+    color: #00ff41;
+    font-family: inherit;
+    font-size: inherit;
+    outline: none;
+    width: 100%;
+}
