@@ -2,20 +2,36 @@
 <html lang="cs">
 <head>
     <meta charset="UTF-8">
-    <title>CyberTerminal v1.0</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Civilizace: Planet Command</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="terminal">
-        <div id="output">
-            <div class="line">SYSTEM BOOT SUCCESSFUL...</div>
-            <div class="line">Vítejte v rozhraní CyberGrid. Zadejte 'help' pro seznam příkazů.</div>
-        </div>
-        <div class="input-line">
-            <span class="prompt">guest@cybernet:~$</span>
-            <input type="text" id="commandInput" autofocus spellcheck="false">
-        </div>
+    <div class="app-container">
+        <section id="visual-display">
+            <div class="header-ui">PLANETÁRNÍ OPERAČNÍ SYSTÉM</div>
+            <div class="planet-view">
+                <div class="planet-core">🌍</div>
+                <div id="city-layout"></div> </div>
+            <div class="stats-panel">
+                <div class="stat-item">ENERGIE: <span id="ui-energy">0</span></div>
+                <div class="stat-item">POČET STAVEB: <span id="ui-buildings">0</span>/19</div>
+            </div>
+        </section>
+
+        <section id="terminal-container">
+            <div id="output">
+                <div class="line system">INICIALIZACE TERMINÁLU... OK</div>
+                <div class="line system">CÍL: Postav 10x 🏠, 4x 🏭, 2x 🏫, 3x 🛒.</div>
+                <div class="line system">Zadej 'help' pro seznam příkazů.</div>
+            </div>
+            <div class="input-line">
+                <span class="prompt">admin@civilization:~$</span>
+                <input type="text" id="commandInput" autofocus spellcheck="false" autocomplete="off">
+            </div>
+        </section>
     </div>
+
     <script src="world.js"></script>
     <script src="terminal.js"></script>
 </body>
